@@ -8,10 +8,10 @@
             <input type="hidden" name="id" id="id" value="{{$courses->id}}">
             <label for="">Name</label><br>
              <input type="text" name="id" id="id" value="{{$courses->name}}" class="form-control">
-            <label for="">Address</label><br>
-             <input type="text" name="id" id="id" value="{{$courses->address}}" class="form-control">
-            <label for="">Mobile</label><br>
-            <input type="text" name="id" id="id" value="{{$courses->mobile}}" class="form-control">
+             <label for="">Syllabus</label><br><br>
+              <input type="text" name="syllabus" id="syllabus" class="form-control"><br>
+ <label for="">Duration</label><br><br>
+              <input type="text" name="duration" id="duration" class="form-control"><br>
 <input type="submit" value="Update" class="btn btn-success"><br>
         </form>
     </div>

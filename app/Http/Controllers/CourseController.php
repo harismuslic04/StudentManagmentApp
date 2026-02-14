@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use App\Models\Course;
+use App\Models\Batch;
 use Illuminate\View\View;
 class CourseController extends Controller
 {
@@ -31,13 +32,9 @@ class CourseController extends Controller
      */
   public function store(Request $request)
 {
-    Batch::create([
-        'name' => $request->name,
-        'course_id' => $request->course_id,
-        'start_date' => $request->start_date,
-    ]);
-
-    return redirect('batches')->with('flash_message','Batch Added');
+   $input=$request->all();
+        Course::create($input);
+        return redirect('courses')->with('flash_message','cours Added');
 }
     /**
      * Display the specified resource.
@@ -53,7 +50,7 @@ class CourseController extends Controller
      */
     public function edit(string $id)
     {
-        $courses=Course::edit($id);
+        $courses=Course::find($id);
         return view("courses.edit")->with("courses",$courses);
     }
 
