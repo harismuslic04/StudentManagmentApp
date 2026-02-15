@@ -72,7 +72,7 @@ class EnrollmentsController extends Controller
      */
     public function destroy(string $id) :RedirectResponse
     {
-        enrollment::destroy($id);
+        Enrollment::destroy($id);
         return redirect('enrollments')->with('flash_message','enrollment deleted');
     }
 }

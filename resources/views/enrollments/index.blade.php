@@ -32,7 +32,6 @@
                                         <td>{{ $item->student->name }}</td>
                                         <td>{{ $item->join_date }}</td>
                                         <td>{{ $item->fee }}</td>
- 
                                         <td>
                                             <a href="{{ url('/enrollments/' . $item->id) }}" title="View enrollment"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/enrollments/' . $item->id . '/edit') }}" title="Edit enrollment"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
